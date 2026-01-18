@@ -2495,7 +2495,7 @@ A ApiOpt value or ApiOpt is an enum value.
 ```volupl
 enum ApiOpt(T) {
   case timeout(api: api)
-  case opt(item: Opt(T))
+  case state(state: Opt(T))
 }
 ```
 
