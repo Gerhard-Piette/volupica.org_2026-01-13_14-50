@@ -1567,6 +1567,8 @@ The Result type is an Enum for error handling.
 - [Enum](#enum)
 - [Error handling](#error-handling)
 
+The Result(T) enum is the standard pattern for functions that can fail, providing more context than Opt(T).
+
 
 
 ### Result type definition
@@ -1593,6 +1595,8 @@ enum Result(T) {
 The Trace type is used for stack traces.
 - [Enum](#enum)
 - [Error handling](#error-handling)
+
+The Trace record represents a single frame in the Volupu call stack, linked to its parent for easy traversal by AI and humans.
 
 
 
@@ -1623,6 +1627,8 @@ rec Trace {
 The NativeTrace type is used for stack traces.
 - [Enum](#enum)
 - [Error handling](#error-handling)
+
+The NativeTrace enum preserves the raw, OS-specific stack trace string from the underlying platform. This allows AI to debug native interop issues while the Trace record handles the high-level Volupu logic.
 
 
 
